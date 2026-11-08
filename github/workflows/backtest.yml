@@ -1,4 +1,1 @@
-      - run: python btc_range_backtest.py
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: ${{ secrets.TG_CHAT }}
+
