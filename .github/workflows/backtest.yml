@@ -9,11 +9,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install pandas numpy requests
-      - run: python btc_weekend_backtest.py
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: ${{ secrets.TG_CHAT }}
-      - run: python btc_range_backtest.py
+      - run: python btc_all_in_one.py
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: ${{ secrets.TG_CHAT }}
@@ -21,7 +17,3 @@ jobs:
         with:
           name: results
           path: "*.csv"
-      - run: python btc_weekend_containment.py
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT: ${{ secrets.TG_CHAT }}
